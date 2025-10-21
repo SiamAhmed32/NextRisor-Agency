@@ -108,7 +108,7 @@ function FloatingPill({ item, index }: { item: PillItem; index: number }) {
           "shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_12px_30px_rgba(0,0,0,0.35)]",
           item.variant === "gradient"
             ? "bg-gradient-to-r from-primary-400/90 to-accent-500/90 text-white"
-            : "bg-white/5 text-white ring-1 ring-white/10",
+            : "bg-white/8 md:bg-white/5 text-white ring-1 ring-white/15 md:ring-white/10",
         ].join(" ")}
         style={{
           transform:

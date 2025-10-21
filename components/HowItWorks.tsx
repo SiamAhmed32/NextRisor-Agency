@@ -262,8 +262,8 @@ export default function HowItWorks() {
             <AnimatedWaves />
 
             {/* Ambient static lights (very soft) */}
-            <div className="pointer-events-none absolute -top-28 -left-24 h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-primary-400 to-accent-500" />
-            <div className="pointer-events-none absolute -bottom-40 -right-28 h-[620px] w-[620px] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-accent-500 to-primary-400" />
+            <div className="pointer-events-none absolute -top-28 -left-24 h-[520px] w-[520px] rounded-full blur-3xl opacity-10 md:opacity-25 bg-gradient-to-tr from-primary-400 to-accent-500" />
+            <div className="pointer-events-none absolute -bottom-40 -right-28 h-[620px] w-[620px] rounded-full blur-3xl opacity-10 md:opacity-25 bg-gradient-to-tr from-accent-500 to-primary-400" />
 
             <div className="container py-16 lg:py-24">
                 <motion.div

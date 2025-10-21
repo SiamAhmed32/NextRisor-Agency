@@ -65,8 +65,8 @@ export default function BrandScroller({
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-ink-900 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-ink-900 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-24 bg-gradient-to-r from-ink-900 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-24 bg-gradient-to-l from-ink-900 to-transparent z-10" />
 
 
           <div className="flex">
@@ -108,6 +108,7 @@ function LogoBadge({ logo, maxH }: { logo: Logo; maxH: number }) {
       }}
     >
       <div className="px-3 py-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={logo.src}
           alt={logo.name}

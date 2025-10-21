@@ -65,7 +65,7 @@ export default function ContactSection() {
         <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <motion.div
-                    className="absolute -top-40 -left-20 w-[700px] h-[700px] rounded-full blur-3xl opacity-15"
+                    className="absolute -top-40 -left-20 w-[700px] h-[700px] rounded-full blur-3xl opacity-10 md:opacity-15"
                     animate={{
                         background: [
                             "radial-gradient(50% 50% at 50% 50%, rgba(124, 45, 255, 0.25), rgba(124, 45, 255, 0))",
@@ -76,7 +76,7 @@ export default function ContactSection() {
                     transition={{ duration: 8, repeat: Infinity }}
                 />
                 <motion.div
-                    className="absolute -bottom-40 -right-20 w-[700px] h-[700px] rounded-full blur-3xl opacity-15"
+                    className="absolute -bottom-40 -right-20 w-[700px] h-[700px] rounded-full blur-3xl opacity-10 md:opacity-15"
                     animate={{
                         background: [
                             "radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.25), rgba(236, 72, 153, 0))",
@@ -159,7 +159,7 @@ export default function ContactSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 lg:p-10"
+                        className="bg-white/8 md:bg-white/5 backdrop-blur-xl border border-white/15 md:border-white/10 rounded-3xl p-8 lg:p-10"
                     >
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

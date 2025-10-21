@@ -273,6 +273,9 @@ export default function ServicesSection() {
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
+    const reduceMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    if (reduceMotion || isMobile) return;
     const cards = cardsRef.current;
     const handlers: Array<{
       enter: (e: MouseEvent) => void;
@@ -361,7 +364,7 @@ export default function ServicesSection() {
                 if (el) cardsRef.current[i] = el;
               }}
               className="rounded-3xl p-6 glass shadow-card transition will-change-transform
-               ring-1 ring-white/5 hover:ring-primary-400/40 relative"
+               ring-1 ring-white/10 hover:ring-primary-400/40 relative"
             >
               {/* Project count badge */}
               <div className="absolute top-4 right-4 px-2 py-1 rounded-full bg-primary-400/20 ring-1 ring-primary-400/30 text-primary-300 text-xs font-medium">

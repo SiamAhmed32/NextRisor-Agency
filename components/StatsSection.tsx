@@ -21,8 +21,8 @@ export default function StatsSection() {
         <section id="stats" className="relative overflow-hidden">
             {/* subtle wide gradient backdrop to make the section feel broader */}
             <div className="pointer-events-none absolute inset-0 -z-10">
-                <div className="absolute -top-40 -left-24 h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-emerald-400/30 to-teal-500/20" />
-                <div className="absolute -bottom-48 -right-24 h-[620px] w-[620px] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-sky-400/25 to-indigo-500/20" />
+                <div className="absolute -top-40 -left-24 h-[520px] w-[520px] rounded-full blur-3xl opacity-10 md:opacity-25 bg-gradient-to-tr from-emerald-400/30 to-teal-500/20" />
+                <div className="absolute -bottom-48 -right-24 h-[620px] w-[620px] rounded-full blur-3xl opacity-10 md:opacity-25 bg-gradient-to-tr from-sky-400/25 to-indigo-500/20" />
             </div>
 
             <div className="container py-16 lg:py-24">
@@ -72,6 +72,12 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
 
     useEffect(() => {
         if (isInView) {
+            const reduceMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+            if (reduceMotion || isMobile) {
+                setCount(stat.value);
+                return;
+            }
             let start = 0;
             const end = stat.value;
             const duration = 2000; // 2 seconds

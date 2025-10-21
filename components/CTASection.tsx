@@ -7,7 +7,7 @@ export default function CTASection() {
         <section className="relative py-24 lg:py-32 overflow-hidden">
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <motion.div
-                    className="absolute -top-40 left-1/4 w-[800px] h-[800px] rounded-full blur-3xl opacity-15"
+                    className="absolute -top-40 left-1/4 w-[800px] h-[800px] rounded-full blur-3xl opacity-10 md:opacity-15"
                     animate={{
                         background: [
                             "radial-gradient(50% 50% at 50% 50%, rgba(124, 45, 255, 0.3), rgba(124, 45, 255, 0))",
@@ -18,7 +18,7 @@ export default function CTASection() {
                     transition={{ duration: 8, repeat: Infinity }}
                 />
                 <motion.div
-                    className="absolute -bottom-40 right-1/4 w-[700px] h-[700px] rounded-full blur-3xl opacity-15"
+                    className="absolute -bottom-40 right-1/4 w-[700px] h-[700px] rounded-full blur-3xl opacity-10 md:opacity-15"
                     animate={{
                         background: [
                             "radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.3), rgba(236, 72, 153, 0))",
@@ -78,7 +78,7 @@ export default function CTASection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed"
+                        className="text-xl text-white/80 md:text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed"
                     >
                         From concept to launch, we transform visionary ideas into exceptional digital experiences
                         that drive real business results and captivate audiences.
@@ -105,7 +105,7 @@ export default function CTASection() {
 
                         <motion.a
                             href="#projects"
-                            className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-3"
+                            className="px-8 py-4 bg-white text-ink-900 md:bg-white/5 md:text-white backdrop-blur-md border border-white/10 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-3"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
