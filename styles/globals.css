@@ -21,6 +21,19 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* Increase glass contrast on small screens for readability */
+@media (max-width: 767px) {
+  .glass {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.06)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium
   bg-gradient-to-r from-primary-400 to-accent-500 hover:from-primary-500 hover:to-accent-600 transition;

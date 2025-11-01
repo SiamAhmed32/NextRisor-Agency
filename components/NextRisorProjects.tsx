@@ -206,10 +206,12 @@ function ProjectCard({
                         }}
                     />
                 ) : (
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src={project.imageUrl}
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                     />
                 )}
 

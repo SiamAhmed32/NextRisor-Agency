@@ -263,21 +263,21 @@ function BackgroundMesh() {
     return (
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div
-                className="absolute -top-40 -left-32 w-[560px] h-[560px] rounded-full blur-3xl opacity-25"
+                className="absolute -top-40 -left-32 w-[560px] h-[560px] rounded-full blur-3xl opacity-10 md:opacity-25"
                 style={{
                     background:
                         "radial-gradient(45% 45% at 50% 50%, rgba(56,189,248,0.55), rgba(99,102,241,0.10))",
                 }}
             />
             <div
-                className="absolute -bottom-36 -right-28 w-[600px] h-[600px] rounded-full blur-3xl opacity-25"
+                className="absolute -bottom-36 -right-28 w-[600px] h-[600px] rounded-full blur-3xl opacity-10 md:opacity-25"
                 style={{
                     background:
                         "radial-gradient(45% 45% at 50% 50%, rgba(168,85,247,0.55), rgba(236,72,153,0.10))",
                 }}
             />
             <div
-                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full blur-3xl opacity-15"
+                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full blur-3xl opacity-10 md:opacity-15"
                 style={{
                     background:
                         "radial-gradient(40% 40% at 50% 50%, rgba(16,185,129,0.45), rgba(16,185,129,0.00))",

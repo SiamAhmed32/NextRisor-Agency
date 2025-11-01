@@ -18,7 +18,9 @@ export default function Page() {
   return (
     <main>
       <Navbar />
-      <HeroSection />
+      <div className="pt-16 lg:pt-0">
+        <HeroSection />
+      </div>
       <BrandScroller speed={24} maxH={40} gap={48} />
       <ServicesSection />
       <NextRisorProjects />

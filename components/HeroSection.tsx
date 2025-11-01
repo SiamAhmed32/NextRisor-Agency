@@ -10,6 +10,11 @@ export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Respect reduced motion and skip heavy effects on mobile
+    const reduceMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    if (reduceMotion || isMobile) return;
+
     const wrap = wrapRef.current;
     const tilt = tiltRef.current;
     if (!wrap || !tilt) return;
@@ -93,7 +98,7 @@ export default function HeroSection() {
                 >
                   Build Your
                   <motion.span
-                    className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500"
+                    className="block text-white md:text-transparent md:bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500"
                     animate={{
                       backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                     }}
@@ -114,7 +119,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="text-xl text-white/70 leading-relaxed"
+                  className="text-xl text-white/80 md:text-white/70 leading-relaxed"
                 >
                   We transform ideas into exceptional digital experiences.
                   Full-stack development, stunning design, and measurable results.
@@ -139,7 +144,7 @@ export default function HeroSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-3"
+                  className="px-8 py-4 bg-white text-ink-900 md:bg-white/5 md:text-white backdrop-blur-md border border-white/10 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-3"
                 >
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                   View Our Work
@@ -152,7 +157,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex items-center gap-8 pt-8"
               >
-
+                {/* reserved for trust badges or quick highlights */}
               </motion.div>
             </motion.div>
 
@@ -269,9 +274,9 @@ export default function HeroSection() {
       </div>
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="hero-blob-1 absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl bg-gradient-to-r from-primary-400 to-accent-500" />
-        <div className="hero-blob-2 absolute -bottom-48 -right-48 w-[800px] h-[800px] rounded-full opacity-10 blur-3xl bg-gradient-to-r from-accent-500 to-primary-400" />
-        <div className="hero-blob-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full opacity-5 blur-3xl bg-gradient-to-r from-green-400 to-blue-500" />
+        <div className="hero-blob-1 absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl bg-gradient-to-r from-primary-400 to-accent-500 hidden md:block" />
+        <div className="hero-blob-2 absolute -bottom-48 -right-48 w-[800px] h-[800px] rounded-full opacity-10 blur-3xl bg-gradient-to-r from-accent-500 to-primary-400 hidden md:block" />
+        <div className="hero-blob-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full opacity-10 md:opacity-15 blur-3xl bg-gradient-to-r from-green-400 to-blue-500" />
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
