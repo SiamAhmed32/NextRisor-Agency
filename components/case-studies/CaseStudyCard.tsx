@@ -71,15 +71,15 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
         damping: 35,
         delay: index * 0.05,
       }}
-      whileHover={{ y: -4, scale: 1.01 }}
-      className="group relative rounded-3xl overflow-hidden ring-1 ring-white/10 hover:ring-primary-500/40 transition-all duration-500 h-full min-h-[320px] flex flex-col"
+      whileHover={{ y: -4 }}
+      className="group relative rounded-3xl overflow-hidden ring-1 ring-white/10 hover:ring-primary-500/40 transition-all duration-500 bg-ink-800/50 backdrop-blur-sm flex flex-col"
     >
-      {/* Background Image/Gradient */}
-      <div className="absolute inset-0">
+      {/* Image Section - Top Part */}
+      <div className="relative h-48 overflow-hidden">
         {isGradient ? (
           <>
             <div
-              className="w-full h-full transition-transform duration-500 group-hover:scale-[1.03]"
+              className="w-full h-full transition-transform duration-500 group-hover:scale-[1.05]"
               style={{
                 background: getGradientStyle(
                   caseStudy.imageUrl.replace("gradient:", "")
@@ -89,11 +89,11 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
             {/* Logo/Text Overlay for gradients */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center transform group-hover:scale-110 transition-transform duration-500">
-                <div className="text-7xl mb-3 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
+                <div className="text-5xl mb-2 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
                   {getCategoryIcon(caseStudy.category)}
                 </div>
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 group-hover:border-white/30 transition-all duration-300">
-                  <span className="text-white/40 text-2xl font-bold tracking-wider group-hover:text-white/60 transition-colors">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 group-hover:border-white/30 transition-all duration-300">
+                  <span className="text-white/40 text-xl font-bold tracking-wider group-hover:text-white/60 transition-colors">
                     {getCategoryAbbr(caseStudy.category)}
                   </span>
                 </div>
@@ -104,7 +104,7 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
           <img
             src={caseStudy.imageUrl}
             alt={caseStudy.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
             loading="lazy"
             decoding="async"
             onError={(e) => {
@@ -121,36 +121,28 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
             }}
           />
         )}
-
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 p-6 mt-auto min-h-[320px] flex flex-col justify-end">
+      {/* Info Section - Bottom Part */}
+      <div className="p-5 flex flex-col flex-1">
         {/* Category Badge */}
         <div className="mb-3">
-          <span className="inline-flex items-center px-3 py-1 text-xs rounded-full bg-white/10 border border-white/15 text-white/90 backdrop-blur-sm">
+          <span className="inline-flex items-center px-2.5 py-1 text-xs rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-400">
             {caseStudy.category}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-white text-xl font-semibold mb-1 line-clamp-2">
+        <h3 className="text-white text-lg font-semibold mb-3 line-clamp-2">
           {caseStudy.title}
         </h3>
 
-        {/* Subtitle */}
-        <p className="text-white/80 text-sm mt-1 line-clamp-2">
-          {caseStudy.subtitle}
-        </p>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-4">
-          {caseStudy.tags.slice(0, 3).map((tag) => (
+        {/* Tags - Only 2 tags */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {caseStudy.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="text-[11px] px-2 py-1 rounded-full bg-white/10 border border-white/10 text-white/70"
+              className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/60"
             >
               {tag}
             </span>
@@ -158,16 +150,16 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
         </div>
 
         {/* CTA Button */}
-        <div className="mt-5">
+        {caseStudy.slug === "violet-bangladesh" || caseStudy.slug === "study-abroad-agency" ? (
           <Link
             href={`/case-studies/${caseStudy.slug}`}
             aria-label={`Read case study: ${caseStudy.title}`}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-ink-900 text-sm font-medium hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-transparent"
+            className="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-400 to-accent-500 text-white text-sm font-medium hover:from-primary-500 hover:to-accent-600 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-ink-800"
           >
             Read case study
             <svg
-              width="14"
-              height="14"
+              width="12"
+              height="12"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -178,7 +170,25 @@ export default function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) 
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </Link>
-        </div>
+        ) : (
+          <div
+            className="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/5 text-white/50 text-sm font-medium cursor-not-allowed"
+          >
+            Case Study Soon
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
       </div>
 
       {/* Glow on hover */}

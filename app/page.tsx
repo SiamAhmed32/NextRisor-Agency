@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -14,7 +13,6 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 
-
 export default function Page() {
   return (
     <main>
@@ -24,12 +22,12 @@ export default function Page() {
       </div>
       <BrandScroller speed={24} maxH={40} gap={48} />
       <ServicesSection />
-      
+      <CaseStudiesSection />
       <WhyChoosePills />
       <HowItWorks />
       <StatsSection />
       <TestimonialsSection />
-      <CaseStudiesSection />
+
       <CTASection />
       <ContactSection />
       <Footer />

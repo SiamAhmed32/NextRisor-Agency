@@ -9,7 +9,12 @@ interface CaseStudyGridProps {
 
 export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
   return (
-    <motion.div layout className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <motion.div 
+      layout 
+      className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      initial="hidden"
+      animate="visible"
+    >
       <AnimatePresence mode="popLayout">
         {caseStudies.map((caseStudy, index) => (
           <CaseStudyCard
