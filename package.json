@@ -12,6 +12,7 @@
     "@netlify/plugin-nextjs": "^5.14.0",
     "framer-motion": "^12.23.22",
     "gsap": "^3.13.0",
+    "lenis": "^1.1.9",
     "next": "14.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

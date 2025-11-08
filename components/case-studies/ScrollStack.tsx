@@ -1,7 +1,30 @@
 "use client";
 
 import React, { ReactNode, useLayoutEffect, useRef, useCallback } from "react";
-import Lenis from "lenis";
+
+// Type for Lenis instance
+type LenisInstance = {
+  on(event: string, callback: Function): void;
+  raf(time: number): void;
+  destroy(): void;
+};
+
+// Dynamic import for lenis to avoid build errors if package is not installed
+let LenisClass: any;
+if (typeof window !== "undefined") {
+  try {
+    // @ts-ignore - lenis may not be installed yet
+    LenisClass = require("lenis").default;
+  } catch (e) {
+    // Fallback if lenis is not installed
+    LenisClass = class {
+      constructor(options?: any) {}
+      on(event: string, callback: Function) {}
+      raf(time: number) {}
+      destroy() {}
+    };
+  }
+}
 
 export interface ScrollStackItemProps {
   itemClassName?: string;
@@ -57,7 +80,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   const scrollerRef = useRef<HTMLDivElement>(null);
   const stackCompletedRef = useRef(false);
   const animationFrameRef = useRef<number | null>(null);
-  const lenisRef = useRef<Lenis | null>(null);
+  const lenisRef = useRef<LenisInstance | null>(null);
   const cardsRef = useRef<HTMLElement[]>([]);
   const lastTransformsRef = useRef(new Map<number, any>());
   const isUpdatingRef = useRef(false);
@@ -226,9 +249,9 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
   const setupLenis = useCallback(() => {
     if (useWindowScroll) {
-      const lenis = new Lenis({
+      const lenis = new LenisClass({
         duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
         touchMultiplier: 2,
         infinite: false,
@@ -253,11 +276,11 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       const scroller = scrollerRef.current;
       if (!scroller) return;
 
-      const lenis = new Lenis({
+      const lenis = new LenisClass({
         wrapper: scroller,
         content: scroller.querySelector(".scroll-stack-inner") as HTMLElement,
         duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
         touchMultiplier: 2,
         infinite: false,
