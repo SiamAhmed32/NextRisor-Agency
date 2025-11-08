@@ -85,25 +85,25 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-[9999] bg-white text-gray-900 p-6 flex flex-col gap-6 overflow-y-auto"
+            className="fixed inset-0 z-[9999] bg-ink-900 text-white p-6 flex flex-col gap-6 overflow-y-auto"
           >
             <div className="flex items-center justify-between">
-              <div className="font-semibold text-gray-900 text-lg">Menu</div>
+              <div className="font-semibold text-white text-lg">Menu</div>
               <button
-                className="text-gray-700 font-medium"
+                className="text-white hover:text-primary-400 font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Close
               </button>
             </div>
 
-            <nav className="grid gap-4 text-base text-gray-800">
+            <nav className="grid gap-4 text-base">
               {["Home", "Services", "Stories", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={item === "Home" ? "#" : `#${item.toLowerCase()}`}
                   onClick={() => setOpen(false)}
-                  className="py-2 border-b border-gray-100 hover:text-primary-500 transition"
+                  className="text-white py-2 border-b border-white/10 hover:text-primary-400 transition-colors"
                 >
                   {item}
                 </a>
