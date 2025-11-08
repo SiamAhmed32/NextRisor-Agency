@@ -97,7 +97,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-2xl tracking-tight">
-                  Next <span className="text-primary-400">Risor</span>
+                  Next <span className="text-primary-400">Riser</span>
                 </span>
                 <span className="text-sm text-white/60">Digital Agency</span>
               </div>
@@ -167,7 +167,7 @@ export default function Footer() {
           className="border-t border-white/10 mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4"
         >
           <div className="text-white/60 text-sm">
-            © {currentYear} Next Risor. All rights reserved.
+            © {currentYear} Next Riser. All rights reserved.
           </div>
           
           <div className="flex items-center gap-6 text-sm text-white/60">

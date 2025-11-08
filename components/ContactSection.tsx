@@ -36,7 +36,7 @@ export default function ContactSection() {
             ),
             title: "Chat with us",
             description: "Our friendly team is here to help.",
-            contact: "contact@nextrisor.com"
+            contact: "contact@nextriser.com"
         },
         {
             icon: (

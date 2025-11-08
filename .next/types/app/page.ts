@@ -1,4 +1,4 @@
-// File: C:\All My Files\Web deveopment\2025\NEXT JS\Metro Solver\metro solver\app\page.tsx
+// File: C:\All My Files\Wev Development\2025\Next Riser\NextRisor-Agency\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

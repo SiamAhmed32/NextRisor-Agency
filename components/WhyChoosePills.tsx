@@ -30,7 +30,7 @@ export default function WhyChooseUsPills() {
             <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
               Why You
               <br className="hidden md:block" />
-              <span className="block">Choose Next Risor?</span>
+              <span className="block">Choose Next Riser?</span>
             </h2>
 
             <p className="mt-4 opacity-85">

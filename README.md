@@ -1,8 +1,8 @@
-# Next Risor - Premium Digital Agency Website
+# Next Riser - Premium Digital Agency Website
 
 A stunning, modern digital agency website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Featuring smooth animations, glass morphism effects, and a premium design that converts visitors into clients.
 
-![Next Risor](https://via.placeholder.com/1200x600/1a1a2e/ffffff?text=Next+Risor+-+Premium+Digital+Agency)
+![Next Riser](https://via.placeholder.com/1200x600/1a1a2e/ffffff?text=Next+Riser+-+Premium+Digital+Agency)
 
 ##  Features
 
@@ -31,7 +31,7 @@ A stunning, modern digital agency website built with **Next.js 14**, **TypeScrip
 ## 🏗 Project Structure
 
 
-next-risor/
+next-riser/
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx
@@ -64,8 +64,8 @@ next-risor/
 
 1. **Clone the repository**
 
-   git clone https://github.com/your-username/next-risor.git
-   cd next-risor
+   git clone https://github.com/your-username/next-riser.git
+   cd next-riser
    
 
 2. **Install dependencies**
@@ -217,9 +217,9 @@ This template is perfect for:
 ## 📞 Support
 
 Need help? Contact us:
-- **Email**: support@nextrisor.com
-- **Website**: [nextrisor.com](https://nextrisor.com)
-- **Twitter**: [@nextrisor](https://twitter.com/nextrisor)
+- **Email**: support@nextriser.com
+- **Website**: [nextriser.com](https://nextriser.com)
+- **Twitter**: [@nextriser](https://twitter.com/nextriser)
 
 ## 🙏 Acknowledgments
 
@@ -230,6 +230,6 @@ Need help? Contact us:
 
 ---
 
-**Built with ❤️ by the Next Risor Team**
+**Built with ❤️ by the Next Riser Team**
 
 *Transforming ideas into exceptional digital experiences.
