@@ -1,0 +1,135 @@
+[
+  {
+    "id": "violet-bangladesh",
+    "title": "Violet Bangladesh",
+    "subtitle": "Modernizing a fashion brand's digital identity and commerce",
+    "imageUrl": "/images/case/violet-bangladesh.jpg",
+    "category": "WordPress / CMS",
+    "tags": ["WordPress", "WooCommerce", "UI/UX"],
+    "impact": "Improved conversion and time-on-site",
+    "summary": "Replatformed to a streamlined WooCommerce stack with performance-first theme and tailored checkout UX.",
+    "slug": "violet-bangladesh"
+  },
+  {
+    "id": "mern-inventory-dashboard",
+    "title": "Inventory Management Dashboard",
+    "subtitle": "Real-time stock & order insights for multi-warehouse ops",
+    "imageUrl": "/images/case/mern-inventory.jpg",
+    "category": "MERN Stack",
+    "tags": ["MongoDB", "Express", "React", "Node"],
+    "impact": "Cut manual data entry by 80%",
+    "summary": "Role-based dashboards, bulk import/export, and alerts with Node workers and indexed Mongo queries.",
+    "slug": "mern-inventory-dashboard"
+  },
+  {
+    "id": "react-native-food-app",
+    "title": "Food Delivery App",
+    "subtitle": "Cross-platform ordering with live courier tracking",
+    "imageUrl": "/images/case/rn-food-app.jpg",
+    "category": "React Native",
+    "tags": ["React Native", "Firebase"],
+    "impact": "Scaled to 50k MAU in 3 months",
+    "summary": "Realtime menus, push notifications, and OTP login; Cloud Functions for order lifecycle.",
+    "slug": "react-native-food-app"
+  },
+  {
+    "id": "shopify-redesign",
+    "title": "Shopify Storefront Redesign",
+    "subtitle": "Conversion-focused design for a DTC brand",
+    "imageUrl": "/images/case/shopify-redesign.jpg",
+    "category": "Shopify",
+    "tags": ["Shopify", "Liquid", "Hydrogen"],
+    "impact": "+22% checkout rate",
+    "summary": "A/B tested PDP variations, faster cart, and optimized media with image CDNs.",
+    "slug": "shopify-redesign"
+  },
+  {
+    "id": "django-lms",
+    "title": "Django LMS",
+    "subtitle": "Scalable learning platform with assessments & reports",
+    "imageUrl": "/images/case/django-lms.jpg",
+    "category": "Django",
+    "tags": ["Django", "DRF", "PostgreSQL"],
+    "impact": "10k learners onboarded",
+    "summary": "Multi-tenant LMS with role permissions, gradebook exports, and SCORM imports.",
+    "slug": "django-lms"
+  },
+  {
+    "id": "wordpress-corporate-cms",
+    "title": "Corporate CMS",
+    "subtitle": "Flexible WordPress blocks for internal teams",
+    "imageUrl": "/images/case/wp-corporate.jpg",
+    "category": "WordPress / CMS",
+    "tags": ["WordPress", "Gutenberg", "PHP"],
+    "impact": "Marketing publishes 3× faster",
+    "summary": "Custom blocks, granular roles, and content workflows integrated with Slack approvals.",
+    "slug": "wordpress-corporate-cms"
+  },
+  {
+    "id": "mern-ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "subtitle": "Full-stack marketplace with payment integration",
+    "imageUrl": "gradient:blue-purple",
+    "category": "MERN Stack",
+    "tags": ["MongoDB", "Express", "React", "Stripe"],
+    "impact": "Processed $2M+ in transactions",
+    "summary": "Scalable marketplace with real-time inventory, multi-vendor support, and secure payment processing.",
+    "slug": "mern-ecommerce-platform"
+  },
+  {
+    "id": "react-native-fitness-app",
+    "title": "Fitness Tracking App",
+    "subtitle": "Cross-platform workout and nutrition tracker",
+    "imageUrl": "gradient:green-teal",
+    "category": "React Native",
+    "tags": ["React Native", "Redux", "HealthKit"],
+    "impact": "100k+ active users",
+    "summary": "Native health integrations, offline sync, and personalized workout plans with AI recommendations.",
+    "slug": "react-native-fitness-app"
+  },
+  {
+    "id": "django-crm-system",
+    "title": "CRM System",
+    "subtitle": "Enterprise customer relationship management",
+    "imageUrl": "gradient:pink-rose",
+    "category": "Django",
+    "tags": ["Django", "PostgreSQL", "Celery"],
+    "impact": "Increased sales efficiency by 45%",
+    "summary": "Advanced pipeline management, automated workflows, and comprehensive analytics dashboard.",
+    "slug": "django-crm-system"
+  },
+  {
+    "id": "shopify-plus-store",
+    "title": "Shopify Plus Store",
+    "subtitle": "High-volume e-commerce with custom features",
+    "imageUrl": "gradient:cyan-blue",
+    "category": "Shopify",
+    "tags": ["Shopify Plus", "Liquid", "GraphQL"],
+    "impact": "Handled 50k+ orders/month",
+    "summary": "Custom checkout, advanced inventory management, and seamless third-party integrations.",
+    "slug": "shopify-plus-store"
+  },
+  {
+    "id": "wordpress-news-portal",
+    "title": "News Portal",
+    "subtitle": "High-traffic news website with custom features",
+    "imageUrl": "gradient:blue-purple",
+    "category": "WordPress / CMS",
+    "tags": ["WordPress", "Custom Theme", "CDN"],
+    "impact": "Served 1M+ monthly visitors",
+    "summary": "Optimized for speed, custom post types, and advanced caching strategies.",
+    "slug": "wordpress-news-portal"
+  },
+  {
+    "id": "mern-social-platform",
+    "title": "Social Media Platform",
+    "subtitle": "Real-time social networking application",
+    "imageUrl": "gradient:pink-rose",
+    "category": "MERN Stack",
+    "tags": ["MongoDB", "Socket.io", "React", "AWS"],
+    "impact": "500k+ registered users",
+    "summary": "Real-time messaging, feed algorithms, and scalable infrastructure on AWS.",
+    "slug": "mern-social-platform"
+  }
+]
+

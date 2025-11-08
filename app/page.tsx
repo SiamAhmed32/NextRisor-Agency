@@ -8,6 +8,7 @@ import WhyChoosePills from "@/components/WhyChoosePills";
 import HowItWorks from "@/components/HowItWorks";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialSection";
+import CaseStudiesSection from "@/components/case-studies/CaseStudiesSection";
 
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -28,6 +29,7 @@ export default function Page() {
       <HowItWorks />
       <StatsSection />
       <TestimonialsSection />
+      <CaseStudiesSection />
       <CTASection />
       <ContactSection />
       <Footer />
