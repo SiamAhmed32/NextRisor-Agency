@@ -93,7 +93,7 @@ export default function CTASection() {
                     >
                         <motion.a
                             href="#contact"
-                            className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl font-semibold text-white shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 flex items-center gap-3"
+                            className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl font-normal text-white shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 flex items-center gap-3"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -136,7 +136,7 @@ export default function CTASection() {
                                 ))}
                             </div>
                             <div className="text-left">
-                                <div className="font-semibold text-white">Join 300+ Happy Clients</div>
+                                <div className="font-normal text-white">Join 300+ Happy Clients</div>
                                 <div className="text-sm text-white/60">Worldwide satisfaction</div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@ export default function CTASection() {
                         <div className="h-8 w-px bg-white/20 hidden sm:block" />
 
                         <div className="text-center sm:text-left">
-                            <div className="font-semibold text-white">24-48 Hour Response</div>
+                            <div className="font-normal text-white">24-48 Hour Response</div>
                             <div className="text-sm text-white/60">Quick project kickoff</div>
                         </div>
                     </motion.div>

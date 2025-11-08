@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import ScrollFloat from "./ScrollFloat";
 
 type PillItem = {
   text: string;
@@ -27,11 +28,17 @@ export default function WhyChooseUsPills() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* LEFT: copy */}
           <div className="max-w-xl">
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
-              Why You
-              <br className="hidden md:block" />
-              <span className="block">Choose Next Riser?</span>
-            </h2>
+            <ScrollFloat
+              containerClassName="text-3xl lg:text-5xl font-bold leading-tight"
+              textClassName="text-3xl lg:text-5xl font-bold leading-tight"
+              animationDuration={1.2}
+              ease="back.out(1.7)"
+              scrollStart="top bottom+=20%"
+              scrollEnd="bottom center"
+              stagger={0.02}
+            >
+              Why You Choose Next Riser?
+            </ScrollFloat>
 
             <p className="mt-4 opacity-85">
               We build fast, scalable experiences with pixel-perfect detail, modern stacks,
